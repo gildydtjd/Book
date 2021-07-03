@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Book from './Book';
-
-function BookList(props) {
-    const BookList = styled.div`
+const BookListDiv = styled.div`
     width: 100%;
-    height: 80vh;
-    margin : 10vh 0vh;
-    background-color: #c9c9c9;
+    height: 100vh;
+    background-color: darkred;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,44 +12,52 @@ function BookList(props) {
 `
     const bookData = [
       {
-      no : 1,
-      name : "Forest",
-      about : "Forest"  
+        no : 1,
+        name : "Moon",
+        about : "Forest",
+        bImg : "/assets/img/moon.jpg",
       },
       {
         no : 2,
         name : "Forest",
-        about : "Forest"  
-      },
+        about : "Forest",
+        bImg : "/assets/img/forest.jpg",
+        },
+      
       {
         no : 3,
-        name : "Forest",
-        about : "Forest"  
+        name : "Tree",
+        about : "Forest",
+        bImg : "/assets/img/tree.jpg",
       },
       {
         no : 4,
-        name : "Forest",
-        about : "Forest"  
+        name : "Sky",
+        about : "Forest",
+        bImg : "/assets/img/sky.jpg",
       },
       {
         no : 5,
-        name : "Forest",
-        about : "Forest"  
+        name : "Sea",
+        about : "Forest",
+        bImg : "/assets/img/sea.jpg",
       },
       {
         no : 6,
-        name : "Forest",
-        about : "Forest"  
+        name : "Reed",
+        about : "Forest",
+        bImg : "/assets/img/reed.jpg",
       },
       ];
 
+function BookList(props) {
       const bookRender = bookData.map((data, key)=>{
           return (<Book bookData={data} key={key}/>)
       });
     return (
-        <BookList>
+        <BookListDiv>
             {bookRender}
-        </BookList>
+        </BookListDiv>
     );
 }
 

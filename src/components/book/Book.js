@@ -13,15 +13,10 @@ const BookDiv = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
     :hover{
         transform: scale(1);
-        z-index: 10;
         margin: 0px -40px;
-    }
-    h2{
-        font-size: 15px;
-        padding: 15px;
-        font-weight: 600;
     }
     `
     

@@ -9,7 +9,6 @@ const BookListDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 `
     const bookData = [
       {
@@ -58,8 +57,8 @@ const BookListDiv = styled.div`
       ];
 
 function BookList(props) {
-      const bookRender = bookData.map((data, key)=>{
-          return (<Link to={data.url}><Book bookData={data} key={key}/></Link>)
+      const bookRender = bookData.map((data, index)=>{
+          return (<Link to={data.url} key={index}><Book bookData={data}/></Link>)
       });
     return (
         <BookListDiv>

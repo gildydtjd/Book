@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 const BookDiv = styled.div`
     width: 300px;
     height: 500px;

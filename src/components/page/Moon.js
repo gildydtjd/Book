@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
+import Count from '../moon/Count';
 
 function Moon(props) {
     const MoonDiv = styled.div`
@@ -24,13 +25,13 @@ function Moon(props) {
             text-shadow: 10px 0 40px #9ecaed;
         }
     }
-   
     `
 
     return (
         <MoonDiv>
             <div className="moon__about">
                 <p {...useScrollFadeIn("up",1,0.4)}>Moon</p>
+                <Count></Count>
             </div>
         </MoonDiv>
     );

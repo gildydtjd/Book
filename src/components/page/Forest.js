@@ -24,7 +24,6 @@ function Forest(props) {
             text-shadow: 10px 0 40px green;
         }
     }
-   
     `
     return (
         <ForestDiv>

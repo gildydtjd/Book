@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
-import Count from '../moon/Count';
-
-function Moon(props) {
-    const MoonDiv = styled.div`
+const MoonDiv = styled.div`
     height: 100%;
     width: 100%;
     background-image: url("/assets/img/Moon.jpg");
@@ -26,12 +23,11 @@ function Moon(props) {
         }
     }
     `
-
+function Moon(props) {
     return (
         <MoonDiv>
             <div className="moon__about">
                 <p {...useScrollFadeIn("up",1,0.4)}>Moon</p>
-                <Count></Count>
             </div>
         </MoonDiv>
     );

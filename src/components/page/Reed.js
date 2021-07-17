@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
-
-function Reed(props) {
-    const ReedDiv = styled.div`
+const ReedDiv = styled.div`
     height: 100%;
     width: 100%;
     background-image: url("/assets/img/reed.jpg");
@@ -25,6 +23,7 @@ function Reed(props) {
         }
     }
     `
+function Reed(props) {
     return (
         <ReedDiv>
             <div className="reed__about">

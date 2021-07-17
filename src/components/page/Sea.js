@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
-
-function Sea(props) {
-    const SeaDiv = styled.div`
+const SeaDiv = styled.div`
     height: 100%;
     width: 100%;
     background-image: url("/assets/img/sea.jpg");
@@ -25,6 +23,7 @@ function Sea(props) {
         }
     }
     `
+function Sea(props) {
     return (
         <SeaDiv>
                 <div className="sea__about">

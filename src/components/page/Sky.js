@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
-function Sky(props) {
-    const SkyDiv = styled.div`
+const SkyDiv = styled.div`
     height: 100%;
     width: 100%;
     background-image: url("/assets/img/sky.jpg");
@@ -24,6 +23,7 @@ function Sky(props) {
         }
     }
     `
+function Sky(props) {
     return (
         <SkyDiv>
                 <div className="sky__about">

@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
-
-function Forest(props) {
-    const ForestDiv = styled.div`
+const ForestDiv = styled.div`
     height: 100%;
     width: 100%;
     background-image: url("/assets/img/forest.jpg");
@@ -25,6 +23,7 @@ function Forest(props) {
         }
     }
     `
+function Forest(props) {
     return (
         <ForestDiv>
             <div className="forest__about">

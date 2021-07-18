@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 const MoonDiv = styled.div`
@@ -24,10 +25,28 @@ const MoonDiv = styled.div`
     }
     `
 function Moon(props) {
+    const [userData, setUserData] = useState([]);
+    const [number, setNumber] = useState("1");
+
+    useEffect(()=>{
+        async function rsData() {
+            await axios.get("https://jsonplaceholder.typicode.com/users").then((data)=>{
+                console.log(data.data);
+                setUserData(data.data);
+                setNumber();
+            })
+        }
+        rsData();
+    },[number]);
+    
+    const renderData = userData.map((data)=>{
+        return( <div key={data.id}>{data.name}</div>)
+    })
     return (
         <MoonDiv>
             <div className="moon__about">
                 <p {...useScrollFadeIn("up",1,0.4)}>Moon</p>
+                {renderData}
             </div>
         </MoonDiv>
     );

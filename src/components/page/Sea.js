@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Data from '../../api/Data';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 const SeaDiv = styled.div`
     height: 100%;
@@ -28,6 +29,7 @@ function Sea(props) {
         <SeaDiv>
                 <div className="sea__about">
                 <p {...useScrollFadeIn("up",1,0.4)}>Sea</p>
+                <Data/>
                 </div>
         </SeaDiv>
     );
